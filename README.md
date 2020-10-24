@@ -13,6 +13,8 @@ package components;
 import openfl.display.DisplayObject;
 import openfl.display.Sprite;
 import openfl.display.DisplayObjectContainer;
+import com.jcgurango.rehaxe.types.BaseObject;
+import com.jcgurango.rehaxe.types.BaseObjectRenderer;
 import com.jcgurango.rehaxe.RenderManager;
 
 class FLRenderManager implements RenderManager {
@@ -61,7 +63,7 @@ class FLRenderManager implements RenderManager {
     src.removeChild(e);
   }
 
-  public function applyProps(element: Any, props: Dynamic) {
+  public function applyProps(element: Any, definition: BaseObjectRenderer, rendered: BaseObject, props: Dynamic) {
     var elem: DisplayObject = element;
     elem.x = props.x;
     elem.y = props.y;

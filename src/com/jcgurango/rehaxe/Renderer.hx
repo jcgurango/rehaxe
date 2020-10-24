@@ -118,9 +118,13 @@ class Renderer {
 
 		if (!mountedObject.mounted) {
 			mountedObject.mount();
+
+			if (rendered.ref != null) {
+				rendered.ref(mountedObject);
+			}
 		}
 
-		mountedObject.updateProps(rendered.props);
+		mountedObject.updateProps(object, rendered, rendered.props);
 
 		var nextParent = parent;
 

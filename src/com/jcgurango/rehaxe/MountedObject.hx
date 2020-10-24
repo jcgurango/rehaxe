@@ -1,5 +1,6 @@
 package com.jcgurango.rehaxe;
 
+import com.jcgurango.rehaxe.types.BaseObject;
 import com.jcgurango.rehaxe.types.BaseObjectRenderer;
 
 class MountedObject {
@@ -43,9 +44,9 @@ class MountedObject {
 		this.mounted = false;
 	}
 
-	public function updateProps(props:Dynamic) {
+	public function updateProps(definition: BaseObjectRenderer, rendered: BaseObject, props:Dynamic) {
 		if (this.realObject != null) {
-			this.renderManager.applyProps(this.realObject, props);
+			this.renderManager.applyProps(this.realObject, definition, rendered, props);
 		}
 	}
 }
