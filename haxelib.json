@@ -1,0 +1,11 @@
+{
+  "name": "rehaxe",
+  "url": "https://github.com/jcgurango/rehaxe",
+  "license": "MIT",
+  "tags": ["react", "dum"],
+  "description": "React philosophy, haxe implementation.",
+  "version": "0.0.1",
+  "classPath": "src",
+  "releasenote": "Initial release.",
+  "contributors": ["jcgurango"]
+}
